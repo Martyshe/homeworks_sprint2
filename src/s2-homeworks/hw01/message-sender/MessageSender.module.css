@@ -1,13 +1,51 @@
 .sendForm {
-
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    height: 40px;
+    margin-bottom: 10px;
+    align-items: center;
 }
 
 .textarea {
+    flex-grow: 1;
+    height: 40px;              /* фиксированная высота от родителя */
+    max-height: 40px;              /* фиксированная высота от родителя */
+    resize: none;              /* запретить ручное изменение размеров */
+    overflow-y: scroll;        /* включить вертикальный скролл */
+    overflow-x: hidden;        /* отключить горизонтальный скролл */
+    scrollbar-width: none;     /* скрыть скроллбар в Firefox */
+    -ms-overflow-style: none;  /* скрыть скроллбар в IE и Edge */
+    box-sizing: border-box;
+    padding: 12px;
+    background-color: #F5F7FB;
+    border: none;
+    border-radius: 20px;
+    width: 100%;
+    min-width: 0;
+    white-space: pre-wrap;
+    word-break: break-word;
+  }
+  
+  .textarea::-webkit-scrollbar {
+    display: none;
+  }
+.textarea::placeholder{
+    font-family: Montserrat;
+font-weight: 400;
+font-size: 14px;
+line-height: 100%;
+letter-spacing: 0%;
 
 }
 
 .button {
-
+    height: 100%;
+    padding: 10px 20px;
+    border-radius: 20px;
+    background-color: #0066CC;
+    border: none;
+    color: white;
 }
 
 .button:hover {
