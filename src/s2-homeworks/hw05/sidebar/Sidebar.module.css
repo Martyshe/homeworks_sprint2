@@ -1,24 +1,67 @@
+.sidebarClass {
+
+}
+
 .sidebar {
+    background-color: rgba(255, 255, 255, 1);
+  position: fixed;
+  top: 0;
+  left: -316px;
+  height: 100vh;
+  z-index: 100;
+  width: 316px;
+  transition: left 0.3s ease-in-out;
 }
 
 .sidebar.open {
+  position: fixed;
+    left: 0;
+    top: 0;
 }
 
-.background {
+
+  .background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 10; /* ниже, чем .sidebar */
+  background-color: rgba(0, 0, 0, 0.5); /* лучше сделать полупрозрачным */
 }
+
+
 
 .nav {
+  display: flex;
+  flex-direction: column;
+  gap: 45px;
+  padding: 64px 0 0 70px;
+}
+a {
+  text-decoration: none;
+  font-family: Montserrat;
+  font-weight: 600;
+  font-size: 22px;
+  color: black;
 }
 
-.nav a {
-}
+
 
 .nav a:hover {
+  color: rgba(88, 172, 255, 1);
 }
 
-.nav a.active {
+.nav .activeLink {
+  color: rgba(0, 89, 178, 1);
+  text-decoration: underline;
 }
 .close {
+  position: absolute;
+  right: 16px;
+  top: 16px;
+  border: none;
+  background-color: transparent;
 }
 
 .close img {

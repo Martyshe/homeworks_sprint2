@@ -1,6 +1,6 @@
-import React, { FC, ReactNode, useEffect, useState } from 'react'
-import { Header } from '../header/Header'
+import { FC, ReactNode, useEffect, useState } from 'react'
 import { Sidebar } from '../sidebar/Sidebar'
+import { Header } from '../header/Header'
 
 type PropsType = {
     children: ReactNode
@@ -26,4 +26,4 @@ export const Layout: FC<PropsType> = ({ children }) => {
             </div>
         </>
     )
-}
+} 

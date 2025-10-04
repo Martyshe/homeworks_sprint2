@@ -1,23 +1,40 @@
-.item {
-}
-
-.item:last-of-type {
-}
-
-.users {
+/* HW8.module.css */
+.container {
+  width: 600px;
+  display: flex;
+  flex-direction: column;
 }
 
 .buttonsContainer {
+  display: flex;
+  align-self: flex-end;
+  gap: 12px;
+  margin-bottom: 18px;
 }
 
-.container {
+.users {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+.users tr {
+  height: 36px;
+}
+
+.users td {
+  padding: 0 17px;
+  width: 50%;
 }
 
 .thead {
+  background-color: #e5e5e5;
+  font-weight: 600;
 }
 
-.nameCol {
+.item td {
+  border-bottom: 1px solid #e5e5e5;
 }
 
-.ageCol {
+.item:last-child td {
+  border: none;
 }

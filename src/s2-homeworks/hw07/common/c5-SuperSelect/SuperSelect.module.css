@@ -1,9 +1,13 @@
 .select {
+  width: 45px;
+  height: 24px;
+  font-size: 11px;
+  line-height: 16px;
+  font-weight: 400;
 }
 
 .select:focus {
 }
-
 
 .option:hover {
 }

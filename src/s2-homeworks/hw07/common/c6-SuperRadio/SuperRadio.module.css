@@ -1,15 +1,55 @@
-.radio {
-}
-
-.radio::before {
-}
-
-
-.radio:checked::before {
+.options {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
 }
 
 .label {
+    display: flex;
+    gap: 10px;
+    position: relative;
+    align-items: center; /* Выравниваем по центру вертикально */
 }
 
-.options {
+.radio {
+    position: absolute;
+    opacity: 0;
+    width: 0;
+    height: 0;
 }
+
+.radio + span {
+    position: relative;
+    display: inline-block;
+    padding-left: 30px; /* Пространство для кастомного радио */
+    line-height: 24px; /* Высота строки для вертикального выравнивания */
+    cursor: pointer;
+}
+
+.radio + span::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 20px;
+    height: 20px;
+    border: 2px solid black;
+    background-color: green;
+    border-radius: 50%;
+    /* Убрали margin, используем правильное позиционирование */
+}
+
+.radio:checked + span::after {
+    content: '';
+    position: absolute;
+    left: 5px; /* (20px - 10px)/2 = 5px */
+    top: 50%;
+    transform: translateY(-50%);
+    width: 10px;
+    height: 10px;
+    background-color: rgb(121, 52, 52);
+    border-radius: 50%;
+}
+
+
